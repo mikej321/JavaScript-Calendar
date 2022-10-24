@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+/* Reset Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+/* Font Reset for Rem */
+
+html {
+  font-size: 62.5%;
+}
+
+/* styles for the main container of the calendar */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #12121F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styles for the calendar itself */
+
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  box-shadow: 0.3rem 1.5rem rgba(0,0,0,0.4);
+}
+
+/* styles for the month header portion of the calendar */
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: #167E56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0.2rem .2rem rgba(0,0,0,0.2);
+}
+
+/* style for the arrows from Font Awesome */
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* style for the month header title */
+
+.month h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  margin-bottom: 1rem;
+}
+
+/* style for the date portion of the calendar underneath
+header month title */
+
+.month p {
+  font-size: 1.6rem;
+}
+
+/* style for the top weekdays portion */
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+/* style for the weekdays themselves */
+
+.weekdays div {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  /* used width to calc based on the rem of the calendar being
+  45 rem minus the padding which equaled out to be .8 rem. the
+  difference was 44.2rem / 7 for each day of the week */
+  width: calc(44.2rem /7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+
+/* style for the days container */
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+/* style for the cell of the days of the week */
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.5);
+  transition: background-color 0.2s;
+}
+
+/* styles all of the days except the current day by using
+a div selector on hover that isn't a class of today */
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: .2rem solid #777;
+  cursor: pointer
+}
+
+/* styles the last 5 days of the previous month as well
+as the last 6 days of the next month. This can be omitted
+in calendars that only have space for the days of the month
+that you are currently in such as print calendars */
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+/* A style for coloring the current day of the week, more of a
+notifier for letting someone know the current date */
+
+.today {
+  background-color: #167E56;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Calendar</title>
+</head>
+<body>
+  <!-- Container for my Calendar -->
+  <div class="container">
+    <!--  Div holding the Calendar -->
+    <div class="calendar">
+      <!-- Header for the month as well as the icon for previous from Font Awesome -->
+      <div class="month">
+        <!-- Previous Icon from Font Awesome -->
+        <i class="fas fa-angle-left prev"></i>
+        <!-- container for the date -->
+        <div class="date">
+          <h1></h1>
+          <p></p>
+        </div>
+        <!-- Right arrow for future months -->
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <!-- wrapper for the weekdays -->
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <!-- wrapper for the days of the month, created using the last
+      5 days of the former month then use emmet div*31{$} which will
+      duplicate 31 divs which count from 1 to 31 -->
+      <div class="days">
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
